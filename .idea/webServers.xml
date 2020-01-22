@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="31ec1285-9abb-4bc4-84ea-15b4cb1272de" name="taskListBeeJee" url="http://pluton.lite-host.in">
+        <fileTransfer host="pluton.lite-host.in" port="21" rootFolder="/www/sergey62dev.ru">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
