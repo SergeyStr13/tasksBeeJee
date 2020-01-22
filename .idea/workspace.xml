@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dff62e06-b287-405c-8bd7-9eae61f71c3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tasksListBeeJee.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/App.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/_App.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task/Task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task/TaskController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/Task/form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/Task/tasks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/User/signForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/тстирование.txt" afterDir="false" />
-    </list>
+    <list default="true" id="dff62e06-b287-405c-8bd7-9eae61f71c3f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,45 +184,6 @@
             </path>
             <path>
               <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasksListBeeJee" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasksListBeeJee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
@@ -299,25 +232,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579681827011</updated>
-      <workItem from="1579681828461" duration="28402000" />
+      <workItem from="1579681828461" duration="29129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28402000" />
+    <option name="totallyTimeSpent" value="29129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24130106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24130106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Floobits" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3282313" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.4914966" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50075644" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="File Transfer" weight="0.27629232" />
       <window_info anchor="bottom" id="Message" order="0" />
