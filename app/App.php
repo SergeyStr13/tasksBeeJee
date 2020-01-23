@@ -29,13 +29,10 @@ class App {
 		spl_autoload_register([$this,'autoload']);
 
 		$this->request = new Request();
-		//$this->uri = '/'.($this->request->get('YPATH') ?? '');
 		$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 		$this->uri = preg_replace('#^[^/]#', '/$0', $uri);
 
 		$this->db = new Database();
-		/*var_dump($this->db->getConnection());*/
-
 		$this->router = new Router([
 			'/' => [TaskController::class, 'all'],
 
@@ -44,12 +41,11 @@ class App {
 			'/task/update' => [TaskController::class, 'update'],
 			'/task/save' => [TaskController::class, 'save'],
 
-			'/user/signForm' => [UserController::class, 'signForm'],
-			'/user/signIn' => [UserController::class, 'signIn'],
-			'/user/signOut' => [UserController::class, 'signOut'],
+			'/user/sign-form' => [UserController::class, 'signForm'],
+			'/user/sign-in' => [UserController::class, 'signIn'],
+			'/user/sign-out' => [UserController::class, 'signOut'],
 		]);
 
-		//разобраться
 		if (self::$instance === null) {
 			self::$instance = $this;
 		}

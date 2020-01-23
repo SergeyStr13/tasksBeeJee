@@ -5,16 +5,13 @@ use PDO;
 use PDOException;
 
 class Task {
-	/* форма сохранения -> formAdd
-	 * сохранить -> save
-	 * formEdit update
-	 * */
+
 	public $id;
 	public $username;
 	public $email;
 	public $description;
 	public $status;
-	public $edit = 1;
+	public $edit;
 
 	public function __construct($fields = []) {
 		foreach ((array)$fields as $field => $value) {
@@ -26,7 +23,7 @@ class Task {
 
 	public function getCountTask() {
 		$db = App::getInstance()->db->getConnection();
-		$query = $db->query("select count(*) from tasks ");
+		$query = $db->query("select count(id) as countAllTask from tasks ");
 		$count = $query->fetch();
 		return $count;
 	}
@@ -54,12 +51,12 @@ class Task {
 			default :
 				$order = 'username asc';
 		};
-		//if page1 1,2 if page2  3,4
 
+		//pagination
 		if ($page == 1) {
 			$limit = ' limit 0,2';
 		} elseif ($page == 2) {
-			$limit = ' limit 2,4';  //order by $order
+			$limit = ' limit 2,4';
 		} else {
 			$limit = '';
 		}
@@ -67,8 +64,7 @@ class Task {
 		$db = App::getInstance()->db->getConnection();
 		$query = $db->query("select * from tasks order by $order $limit");
 		$tasks = $query->fetchAll(\PDO::FETCH_CLASS, self::class);
-		/*$countRow = $db->query("SELECT FOUND_ROWS()")->fetch();*/
-		//var_dump($countRow);
+
 		return $tasks;
 	}
 

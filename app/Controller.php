@@ -1,7 +1,6 @@
 <?php
 namespace app;
 
-
 class Controller {
 	private $name;
 
@@ -15,7 +14,6 @@ class Controller {
 		preg_match('#([^\\\\]+)Controller#',get_class($this),$matches);
 		$this->name = $matches[1];
 		$this->app = App::getInstance();
-		//$this->viewPath = $this->app->viewPath;
 		$this->request = $this->app->request;
 		$this->uri = $this->app->uri;
 	}

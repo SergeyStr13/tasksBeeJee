@@ -5,9 +5,7 @@ use PDO;
 use PDOException;
 
 class Database {
-	/**
-	 * @var PDO $connection
-	 */
+	/** @var PDO $connection */
 	private $connection;
 
 	public function __construct() {

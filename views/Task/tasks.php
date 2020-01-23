@@ -1,52 +1,46 @@
 <?php
 /** @var \task\Task $tasks */
-var_dump($sort);
-var_dump($page);
 ?>
 <script>
 	$(document).ready(function () {
 		let sort = $("#sort :nth-child(<?= $sort ?>)").attr('selected', 'selected');
-		console.log(sort);
-
 		let page = $(".pagination > li:eq(<?= $page-1 ?>)").addClass('active');
-		console.log(page);
 	});
 </script>
-	<div class="container" style="top: 30px">
-		<nav class="navbar pull-right">
-			<a class="btn btn-primary" href="/task/add">Добавить</a>
-			<?php if ($admin === 0) { ?>
-				<a  class="btn btn-primary" href="/user/signForm">Авторизоваться</a>
-			<?php } else { ?>
-			<a  class="btn btn-primary" href="/user/signOut">Выйти</a>
-			<?php }?>
-		</nav>
+<div class="container" style="margin-top: 30px">
+
+	<nav class="navbar pull-right">
+		<form action="/" method="get" style="display: inline">
+			<select name="sort" id="sort">
+				<option value="1" selected>Пользователю возрастанию</option>
+				<option value="2">Пользователю убыванию</option>
+				<option value="3">Email возрастанию</option>
+				<option value="4">Email убыванию</option>
+				<option value="5">Статусу возрастанию</option>
+				<option value="6">Статусу убыванию</option>
+			</select>
+			<input type="hidden" name="page" value="<?= $page ?>">
+			<button class="btn btn-primary" type="submit">Сортировать</button>
+		</form>
+
+		<a class="btn btn-primary" href="/task/add">Добавить</a>
+		<?php if ($isAdmin === 0) { ?>
+			<a  class="btn btn-primary" href="/user/sign-form">Авторизоваться</a>
+		<?php } else { ?>
+			<a  class="btn btn-primary" href="/user/sign-out">Выйти</a>
+		<?php }?>
+	</nav>
+	<div class="clearfix"></div>
+	<div class="alert alert-success alert-dismissible" style="display: <?= $message ? 'block' : 'none'?>">
+		<a href="#" class="close" data-dismiss="alert">&times;</a>
+	  	<?= $message ?>
 	</div>
-
-<div class="container">
-	<form action="/" method="get">
-		<select name="sort" id="sort">
-			<option value="1" selected>User asc</option>
-			<option value="2">User desc</option>
-			<option value="3">Email asc</option>
-			<option value="4">Email desc</option>
-			<option value="5">Status asc</option>
-			<option value="6">Status desc</option>
-		</select>
-		<button type="submit">sort</button>
-	</form>
-
-	 <ul class="pagination">
-		  <li><a href="/?page=1">1</a></li>
-		  <li><a href="/?page=2">2</a></li>
-	 </ul>
-
 	<table class="table">
 		<tr>
 			<th>Пользователь</th>
 			<th>е-mail</th>
 			<th>Статус</th>
-			<th>Текста задачи</th>
+			<th>Текст задачи</th>
 			<th></th>
 		</tr>
 
@@ -54,20 +48,27 @@ var_dump($page);
 			<tr>
 				<td><?= $task->username ?></td>
 				<td><?= $task->email ?></td>
-				<?php if ($task->status == 1) {?>
-					<td>Выполнена</td>
-				<?php } else { ?>
-					<td>Не выполнена</td>
-				<?php } ?>
-				<td><?= $task->description ?></td>
 				<td>
-					<?php if ($admin): ?>
-						<a class="" href="/task/update?id=<?= $task->id ?>" > Редактировать</a>
+					<?= $task->status ? 'Выполнена' : 'Не выполнена'?>
+					<?php if ($isAdmin): ?>
+						<div><span class="label label-success"><?= $task->edit ? ' Отредактировано администратором' : ''?></span></div>
+					<?php endif; ?>
+				</td>
+				<td><?= $task->description ?> </td>
+				<td>
+					<?php if ($isAdmin): ?>
+						<a class="" href="/task/update?id=<?= $task->id ?>">Редактировать</a>
 					<?php endif; ?>
 				</td>
 			</tr>
 		<?php endforeach; ?>
 	</table>
+	<div  class="text-center" <?= $pageVisible ?>>
+		<ul class="pagination">
+			  <li><a href="/?page=1&sort=<?= $sort ?>">1</a></li>
+			  <li><a href="/?page=2&sort=<?= $sort ?>">2</a></li>
+		 </ul>
+	</div>
 </div>
 
 
